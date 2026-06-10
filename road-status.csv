@@ -1,0 +1,6 @@
+from,to,status,severity,type,title,source,source_url,updated_at,valid_until,note
+Naran,Batakundi,open,low,high-pass,Naran to Batakundi open for demo data,Demo data,,2026-06-09,,Learning sample row; replace with a trusted source during daily updates.
+Lulusar Lake,Babusar Top,caution,medium,high-pass,Babusar approach requires weather check,Demo data,,2026-06-09,,Learning sample row; keep caution when current status is uncertain.
+Rondu,Skardu,caution,medium,landslide,Skardu road landslide-prone section,Demo data,,2026-06-09,,Learning sample row; verify before travel.
+Chillam,Deosai Plains,closed,high,high-pass,Deosai route closed in sample status file,Demo data,,2026-06-09,2026-06-12,Learning sample row showing how a closed route is avoided.
+Sost,Khunjerab Pass,unknown,medium,high-pass,Khunjerab status not confirmed in sample data,Demo data,,2026-06-09,,Learning sample row; unknown does not block route.
