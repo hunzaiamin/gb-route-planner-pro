@@ -187,10 +187,16 @@ svg {
   opacity: .65;
 }
 .edge.active.roadCaution {
-  stroke: var(--route2);
+  stroke: var(--route);
+  stroke-dasharray: 12 5;
+  stroke-width: 8;
+  opacity: 1;
 }
 .edge.active.roadUnknown {
-  stroke: #52616b;
+  stroke: var(--route);
+  stroke-dasharray: 4 5;
+  stroke-width: 8;
+  opacity: 1;
 }
 .node {
   fill: #4d5962;
@@ -624,6 +630,12 @@ function getWeight(edge) {
   if (pref === "scenic") {
     if (["babusar","hunza","ghizer","skardu","astore","deosia","side"].includes(road)) w *= 0.8;
     if (road === "kkh") w *= 1.1;
+  }
+  if (edgeKey(edge[0], edge[1]) === edgeKey("Rawalpindi", "Islamabad")) {
+    w *= 1.5;
+  }
+  if (edgeKey(edge[0], edge[1]) === edgeKey("Rawalpindi", "Taxila")) {
+    w *= 0.75;
   }
   if (roadStatus && roadStatus.status === "caution") {
     w *= roadStatus.severity === "high" ? 1.9 : 1.45;
